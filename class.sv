@@ -20,3 +20,5 @@ module tb;
     f.data3 = 7'd90;
     $display("%0p %0p %0p",f.data1,f.data2,f.data3);
   end
+  
+endmodule
