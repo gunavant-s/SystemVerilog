@@ -1,3 +1,7 @@
+// Create a function that generate and return 32 values of multiple of 8 (0, 8, 16, 24, 32, 40 .... 248). 
+// Store this value in the local array of the testbench top and also print the value of each element of this array on the console.
+
+
 module tb;
   
   function int multiply(input int a,b);
