@@ -1,3 +1,8 @@
+// Assume class consists of three data members a, b, and c each of size 4-bit. 
+// Create a task inside the class that returns the result of the addition of data members. 
+// The task must also be capable of sending the value of a, b, c, and result to the console. Verify code for a = 1, b = 2, and c = 4.
+
+
 class first;
   
   bit[7:0] a,b,c;
