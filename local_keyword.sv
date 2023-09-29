@@ -1,13 +1,13 @@
 class first;
   
- local int data = 34;
+ local int data = 34; //restrict scope only to this class. Even by inheritance this value can't be accessed
   
   task set(input int data);
-    this.data = data;
+    this.data = data; // set the value by independent methods
   endtask
   
   function int get();
-  return data;   
+  return data;   // get the local value
   endfunction
   
   task display();
