@@ -24,27 +24,11 @@ module tb;
     
     f2 = f1.copy;  // calling the function better than "f2 = new f1"
     $display("Data : %0d and TEMP : %0x", f2.data, f2.temp); 
+    f2.data = 45;
+    $display("Data : %0d and TEMP : %0x", f2.data, f2.temp); 
   end
-  
-  
-  
-  
-  
-  
- /* 
-  initial begin
-    f1 = new();
-    ///////////
-    f1.data = 45;
-    /////////
-    f2 = new f1;
-    ////////////
-    f2.data = 56;
-    
-    
-    $display("%0d", f1.data);
-  
-  end
-  */
-  
+
+// # KERNEL: Data : 34 and TEMP : 11
+// # KERNEL: Data : 45 and TEMP : 11
+
 endmodule
