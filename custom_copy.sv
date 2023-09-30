@@ -8,7 +8,10 @@ class first;
     copy.data = data;
     copy.temp = temp;
   endfunction
-  
+
+// A copy constructor is a special type of constructor which initializes all the data members of the newly created object 
+// by copying the contents of an existing object. 
+// The compiler provides a default copy constructor.  
   
 endclass
  
