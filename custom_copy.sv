@@ -21,7 +21,10 @@ module tb;
   
   initial begin
     f1 = new();  
-    f2 = new();
+    // f2 = new();
+    // Without creating an object we can copy f1 data using this methodolgy
+
+    // "first f2;" declares a variable named f2 of type first. This means that f2 can store a handle to an object of the first class.
     
     f2 = f1.copy;  // calling the function better than "f2 = new f1"
     $display("Data : %0d and TEMP : %0x", f2.data, f2.temp); 
