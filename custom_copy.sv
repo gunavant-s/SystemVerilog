@@ -9,9 +9,7 @@ class first;
     copy.temp = temp;
   endfunction
 
-// A copy constructor is a special type of constructor which initializes all the data members of the newly created object 
-// by copying the contents of an existing object. 
-// The compiler provides a default copy constructor.  
+
   
 endclass
  
@@ -35,3 +33,9 @@ module tb;
 // # KERNEL: Data : 45 and TEMP : 11
 
 endmodule
+
+// A copy constructor is a special type of constructor which initializes all the data members of the newly created object 
+// by copying the contents of an existing object. 
+// The compiler provides a default copy constructor.  
+// Copy constructors have the disadvantage of not being inherited by child classes. Because of this, adding a field to a class is simple. 
+// Only the copy constructor needs to be changed. If a parent class is used to reference a child class, the child class's copy constructor cannot be used.
