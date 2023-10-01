@@ -15,7 +15,7 @@ class second;
   function new();
     f1 = new();  //custom constructor calling the first class
   endfunction
-  
+  //And whenever you try to use other class in a class, in that case, you try to use a custom constructor.
 endclass
  
  
