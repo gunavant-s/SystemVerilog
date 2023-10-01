@@ -38,6 +38,8 @@ module tb;
     // changing the data members of s2 won't effect s1
     
     s2.f1.data = 56;
+    // But in shallow copy when we access the handler and change the data members of the handler f1 using s2 even the data of s1 is effected.
+    // To avoid this we go for Deep Copy
     
     $display("Value of data: %0d", s1.f1.data); //78 the data is altered as we used the reference of the object "tb->s2->f1->data"
     
