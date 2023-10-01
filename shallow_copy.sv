@@ -35,6 +35,7 @@ module tb;
     s2.ds = 78; 
     
     $display("Value of ds: %0d", s1.ds); // 45
+    // changing the data members of s2 won't effect s1
     
     s2.f1.data = 56;
     
