@@ -29,9 +29,10 @@ module tb;
     f2 = f1.copy;  // calling the function better than "f2 = new f1"
     $display("Data : %0d and TEMP : %0x", f2.data, f2.temp); 
     f2.data = 45;
-    $display("Data : %0d and TEMP : %0x", f2.data, f2.temp); 
+    $display("Data : %0d and TEMP : %0x", f2.data, f1.temp); 
   end
 
+// In this any changes made in the copyed f2 is also effected in the f1
 // # KERNEL: Data : 34 and TEMP : 11
 // # KERNEL: Data : 45 and TEMP : 11
 
