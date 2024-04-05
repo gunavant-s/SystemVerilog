@@ -1,5 +1,4 @@
 class first;
-  
   int data = 34;
   
   task display();
@@ -8,8 +7,7 @@ class first;
   
 endclass
  
-class second;
-  
+class second;  
   first f1;
   
   function new();
@@ -17,10 +15,9 @@ class second;
   endfunction
    
 endclass
- 
- 
+
+
 module tb;
-  
   second s;
   
   initial begin
@@ -29,9 +26,6 @@ module tb;
     s.f1.display();
     
     s.f1.data = 45;
-    s.f1.display();
-    
-    
+    s.f1.display();  
   end
-
 endmodule
