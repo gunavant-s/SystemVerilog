@@ -1,9 +1,7 @@
-// Create a function that generate and return 32 values of multiple of 8 (0, 8, 16, 24, 32, 40 .... 248). 
-// Store this value in the local array of the testbench top and also print the value of each element of this array on the console.
-
+//Create a function that will perform the multiplication of the two unsigned integer variables. 
+//Compare values return by function with the expected result and if both values match send "Test Passed" to Console else send "Test Failed".
 
 module tb;
-  
   function int multiply(input int a,b);
     return a*b;
   endfunction
@@ -18,53 +16,6 @@ module tb;
     else
       $display("Test Not Passed ");
   end
-  
 endmodule
 
 
-module tb1;
-  bit [7:0] ar[31];
-  
-  function automatic void multiple(ref bit[7:0] ar[31]); //automatic, ref for pass by reference. No return.
-    for(int i=0;i<=30;i++) begin
-      ar[i] = (i+1)*8; // changes made in the array by altering the memory
-    end
-  endfunction
-  
-  initial begin
-    multiple(ar); //altered the array
-    for(int i=0;i<=30;i++) begin
-      $display("%0d -> %0d ",i,ar[i]);
-    end
-  end
-endmodule
-
-// module tb;
-  
-//   bit clk;
-//   initial clk = 0;
-//   bit en,wr;
-//   bit [5:0] addr;
-  
-//   always #20 clk = !clk;
-  
-//   task stmuli();
-//     #10
-//     en=1;wr=1;addr=12;
-//     #10
-//     @(posedge clk);
-//       addr = 14;
-      
-//     @(posedge clk);
-//       wr=0;addr = 23;
-    
-//     @(posedge clk);
-//       addr = 48;
-    
-//     @(posedge clk);
-//       en =0;addr = 56;
-    
-//   endtask
-  
-  
-// endmodule
