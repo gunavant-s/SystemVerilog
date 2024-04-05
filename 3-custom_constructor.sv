@@ -13,7 +13,13 @@ module tb;
   
   initial begin
     f = new(2, 4, 56);
-    // f = new(2, , 56); This can also be used. Dont mess with order
+    
+    // f = new(2, , 56); 
+    //This can also be used. Dont mess with order
+
+    //f = new(.c(90), .a(56), .b(99));
+    //This works too but shouldnt omit any variable
+    
     $display("a, b, c : %0d, %0d, %0d",f.a,f.b,f.c);
   end
 endmodule
