@@ -1,3 +1,6 @@
+// The super keyword is used from within a sub-class to refer to properties and methods of the base class. 
+// It is mandatory to use the super keyword to access properties and methods if they have been overridden by the sub-class.
+
 class first; ////////////parent class
   int data;
   
@@ -15,7 +18,6 @@ class second extends first; //child class
     super.new(data);
     this.temp = temp; 
   endfunction
-  
 endclass
  
 module tb;
@@ -25,5 +27,4 @@ module tb;
     s = new(67, 45);
     $display("Value of data : %0d and Temp : %0d", s.data, s.temp);
   end
-  
 endmodule
