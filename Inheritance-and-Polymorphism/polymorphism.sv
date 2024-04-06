@@ -30,7 +30,7 @@ module tb;
     f = new();
     s = new();
     
-    f = s;
+    f = s; //converts to class second and calls the functions in second class
     f.display();  
   end
 endmodule
