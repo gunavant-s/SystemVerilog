@@ -1,4 +1,4 @@
-// A copy constructor is a special type of constructor which initializes all the data members of the newly created object 
+// A copy constructor is a special type of constructor which initializes all the data members of the newly created object.
 // by copying the contents of an existing object. 
 // The compiler provides a default copy constructor.  
 // Copy constructors have the disadvantage of not being inherited by child classes. Because of this, adding a field to a class is simple. 
