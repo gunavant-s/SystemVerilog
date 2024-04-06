@@ -9,7 +9,6 @@
 //3. Check status of randomization
 
 class generator;
-  
   randc bit [7:0] x, y, z;
   
   constraint data_x {x>10; x<100;} 
@@ -18,6 +17,23 @@ class generator;
   
   // constraint data {x>10; x<100; y>101; y<201; z>201; z<250;}
   //works too
+
+  /*
+    constraint data {
+    x inside {[0:15],[18:100]};
+    y inside {[16:18],[101:200], 69};
+    z inside {[201:255],[1:20], 99};
+  }
+  */
+
+    /*
+    constraint data {
+    !(x inside {[0:15],[18:100]});
+    !(y inside {[16:18],[101:200], 69});
+    !(z inside {[201:255],[1:20], 99});
+  }
+  */
+  
 endclass
  
 module tb;
