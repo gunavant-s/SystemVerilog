@@ -1,8 +1,6 @@
 module tb;
- 
   int data1,data2;
   event done;
-  
   int i = 0;
   
   //generator
@@ -29,12 +27,12 @@ module tb;
     wait(done.triggered);
     $finish(); // after the trigger the whole simulation is finished
   end
-  
-      
-  
+
 endmodule
 
 /*
+We can see that some of the data is not received like -1866196019, etc.
+
 # KERNEL: Data sent : -1866196019
 # KERNEL: Data sent : 1497363586
 # KERNEL: Data recieved : 1497363586
