@@ -1,6 +1,11 @@
 // In initial begin block, the statements present are executed sequentially.
 // The fork-join allows parallel exectution of multiple process. So using fork-join we called the tasks and made use of wait(<event>.triggered) within the tasks.
 
+// There are three types of fork-join
+// fork-join : If all the process in fork-join completes, them the statements after join gets executed.
+// fork join_any : If any of the process in fork-join block complete, the statements after join_any gets executed.
+// fork join_none : A fork and join_none will allow the main thread to resume execution of further statements that lie after the fork regardless of whether the forked threads finish.
+
 module tb;
   int data1,data2;
   event done, next;
