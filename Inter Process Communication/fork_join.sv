@@ -39,6 +39,7 @@ module tb;
       received();
       wait_event();
     join
+		//The statements after "join" gets executed after the completion of fork-join block.
   end
   
 endmodule
