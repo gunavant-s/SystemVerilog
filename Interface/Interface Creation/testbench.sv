@@ -18,7 +18,8 @@ endinterface
 
 module tb;
   add_if inf(); //Unlike handler in class, interface requires ()
-  
+
+  //Instance of adder module
   add dut (.a(inf.a),
            .b(inf.b),
            .sum(inf.sum)
