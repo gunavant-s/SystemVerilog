@@ -1,0 +1,61 @@
+Create Monitor and Scoreboard Code for Synchronous 4-bit Multiplier. 
+Stimulus is generated in Testbench top so do not add Transaction, Generator, or Driver Code. 
+Also, add the Scoreboard model to compare the response with an expected result.
+
+Design Code:
+module top
+(
+  input clk,
+  input [3:0] a,b,
+  output reg [7:0] mul
+);
+  
+  always@(posedge clk)
+    begin
+     mul <= a * b;
+    end
+  
+endmodule
+
+//////////////////////////////////////////////////////////////////////////////////////
+Interface Code:
+
+interface top_if;
+  logic clk;
+  logic [3:0] a, b;
+  logic [7:0] mul;
+  
+endinterface
+
+////////////////////////////////////////////////////////////////////////////////////
+Testbench Top Code:
+
+module tb;
+  
+  top_if vif();
+  
+  top dut (vif.clk, vif.a, vif.b, vif.mul);
+  
+  initial begin
+    vif.clk <= 0;
+  end
+  
+  always #5 vif.clk <= ~vif.clk;
+  
+  initial begin
+    for(int i = 0; i<20; i++) begin
+      @(posedge vif.clk);
+      vif.a <= $urandom_range(1,15);
+      vif.b <= $urandom_range(1,15);
+    end
+    
+  end
+  
+  initial begin
+    $dumpfile("dump.vcd");
+     $dumpvars;    
+    #300;
+    $finish();
+  end
+  
+endmodule
