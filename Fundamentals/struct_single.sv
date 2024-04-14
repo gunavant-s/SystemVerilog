@@ -5,30 +5,28 @@
 // A packed structure stores all members contiguously, with the first member being the left-most (most significant bits) of the storage.
 
 
-module tb; 
-  
+module tb;   
   struct {
    logic [31:0] source_address;
    logic [31:0] destination_address;
    logic [63:0] data;
-   logic [3:0] ecc;
+   int ecc;
   } packet;
   
   initial begin
-    packet = '{default : 0};  
+    packet = '{default : 4};  
     $display("%0p",packet);
     #10;
     
     packet.source_address = 32'd16;
     packet.destination_address = 32'd32;
     packet.data = 63'd123456;
+    packet.ecc = 8;
     $display("%0p",packet);
     #10;
 
-    packet = '{32, 64, 96, 4};
+    packet = '{32, 64, 96, 192};
     $display("%0p",packet);
-
-    packet.ecc = 8;
   end
   
 endmodule
