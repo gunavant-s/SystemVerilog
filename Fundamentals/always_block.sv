@@ -23,7 +23,7 @@ module ex();
       .......
     endcase
   end
-
   */
+  
   #500 $finish;
 endmodule
