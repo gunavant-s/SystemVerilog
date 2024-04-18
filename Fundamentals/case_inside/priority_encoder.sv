@@ -9,13 +9,23 @@ module priority_encoder(
 
   always_comb begin
     case (din[3:0]) inside
-      4'b1xxx: encode = 2'd3;  // Highest priority (any value in MSB)
-      4'b01xx: encode = 2'd2;  // 1 in second MSB, don't care in lower 2 bits
-      4'b001x: encode = 2'd1;  // 1 in third MSB, don't care in lowest bit
+      4'b1???: encode = 2'd3;  // Highest priority (any value in MSB)
+      4'b01??: encode = 2'd2;  // 1 in second MSB, don't care in lower 2 bits
+      4'b001?: encode = 2'd1;  // 1 in third MSB, don't care in lowest bit
       4'b0001: encode = 2'd0; // only 1 in LSB
       default: encode = 2'd0;
       
     endcase
   end
+  
+  // always_comb begin
+  //   case (din[3:0]) inside
+  //     4'b1xxx: encode = 2'd3;  // Highest priority (any value in MSB)
+  //     4'b01xx: encode = 2'd2;  // 1 in second MSB, don't care in lower 2 bits
+  //     4'b001x: encode = 2'd1;  // 1 in third MSB, don't care in lowest bit
+  //     4'b0001: encode = 2'd0; // only 1 in LSB
+  //     default: encode = 2'd0; 
+  //   endcase
+  // end
   
 endmodule
