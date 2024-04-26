@@ -8,9 +8,9 @@ module d_latch
   
   always_latch
     if (!rst) 
-      q <= 1'b0;
+      q <= 1'b0; //non-blocking 
     else
       if (en)
-        q <= 1'b0;
+        q <= d;
   
 endmodule: d_latch
