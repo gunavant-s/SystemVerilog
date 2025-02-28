@@ -1,6 +1,7 @@
 class first;
   int data = 34;
-  
+  local int data_local; // can't be access outside the class
+  // When tried we get the error: "Cannot access local/protected member ""f1.data"" from this scope.
   task display();
     $display("Value of data : %0d",data);
   endtask 
