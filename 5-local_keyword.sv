@@ -1,5 +1,5 @@
 class first;
-  
+
  local int data = 34; //restrict scope only to this class. Even by inheritance this value can't be accessed
   
   task set(input int data);
