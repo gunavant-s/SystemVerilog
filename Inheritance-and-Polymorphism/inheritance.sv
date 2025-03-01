@@ -1,7 +1,7 @@
 //The extent class will inherit the property as well as the data member of the class which we are extending.
 //We could refer to the original class. It's a pattern class and extended class has the child class.
 
-class first; //parent class
+class first; //parent or super class
   int data = 12;
   
   function void add();
@@ -9,7 +9,7 @@ class first; //parent class
   endfunction
 endclass
 
-class second extends first; //child class
+class second extends first; //child or derived class
   int temp = 34;
 endclass
 
