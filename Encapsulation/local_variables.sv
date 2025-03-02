@@ -1,5 +1,5 @@
 class Packet;
-  local bit [31:0] data;
+  protected bit [31:0] data;
 
   // Constructor
   function new(bit [31:0] data);
@@ -7,10 +7,10 @@ class Packet;
   endfunction
 
   // Declare external methods and tasks
-  // prototypes
   extern function void display();
   extern task process();
   extern task minus();
+endclass;
 
 // Implementation of the display method
 function void Packet::display();
